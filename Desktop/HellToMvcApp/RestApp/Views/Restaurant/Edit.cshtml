@@ -1,0 +1,23 @@
+﻿@model RestApp.Models.Restaurant
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+<form action="" method="post">
+<table class="table table-responsive col-lg-8">
+    <tr><td>Id-</td><td> <input type="text" name="Id" value=@Model.Id required  disabled="disabled" /> </td></tr>
+    <tr><td>Title-</td><td><input type="text" name="Title" value=@Model.Title required /> </td></tr>
+    <tr><td>City-</td><td><input type="text" name="City" value=@Model.City required /> </td></tr>
+    <tr><td>Rating-</td><td><input type="number" name="Rating" min="1" max="5" value=@Model.Rating /> </td></tr>
+
+    <tr>
+        <td colspan="2">
+            <input type="submit" name="name" value="Update" />
+        </td>
+    </tr>
+</table>
+
+
+</form>

@@ -1,0 +1,42 @@
+﻿@model RestApp.Models.Restaurant
+@{
+    //Layout = "~/Views/Shared/_Layout1.cshtml";
+    ViewBag.Title = "Add";
+}
+
+@section myMsg{ 
+    <h3>   I am from Add view </h3>
+}
+
+<h2>Add</h2>
+
+@using (Html.BeginForm())
+{
+    <table class="table table-responsive col-lg-8">
+        <tr><td>Id-</td><td> @Html.EditorFor(x=>Model.Id) </td></tr>
+        <tr><td>Title-</td><td>@Html.EditorFor(x => Model.Title) </td></tr>
+        <tr><td>City-</td><td>@Html.EditorFor(x => Model.City) </td></tr>
+        <tr><td>Rating-</td><td>@Html.EditorFor(x => Model.Rating) </td></tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit"  name="name" value="Save" />
+            </td>
+        </tr>
+    </table>
+
+}
+
+@*<form action="" method="post">
+    <table class="table table-responsive col-lg-8">
+        <tr><td>Id-</td><td> <input type="text" name="Id" value="" required/> </td></tr>
+        <tr><td>Title-</td><td><input type="text" name="Title" value="" required /> </td></tr>
+        <tr><td>City-</td><td><input type="text" name="City" value="" required/> </td></tr>
+        <tr><td>Rating-</td><td><input type="number" name="Rating" min="1" max="5" value="" /> </td></tr>
+
+        <tr><td colspan="2">
+                <input type="submit"  name="name" value="Save" />
+            </td></tr>
+    </table>
+
+    
+</form>*@

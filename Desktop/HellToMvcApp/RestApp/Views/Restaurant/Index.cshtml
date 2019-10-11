@@ -1,0 +1,36 @@
+﻿@model List<RestApp.Models.Restaurant>
+
+@{
+    ViewBag.Title = "Index";
+    <h3> Welcome to Restaurant </h3>
+}
+@*<img src="Rest.jpg">*@
+<h2>Index</h2>
+@section myMsg{
+    
+}
+
+<p align="right"> @Html.ActionLink("Add New", "Add") </p>
+<table class="table table-responsive">
+    <tr><td>ID</td><td>Title</td><td>Rating</td><td>City</td><td></td><td></td></tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Title</td>
+            <td>@item.Rating</td>
+            <td>@item.City</td>
+            <td>
+                @*<a href="Details/?x=@item.Id">Details</a>*@
+                @Html.ActionLink("Detail", "Details", new { x = item.Id })
+
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = @item.Id })
+            </td>
+        </tr>
+    }
+
+</table>
+

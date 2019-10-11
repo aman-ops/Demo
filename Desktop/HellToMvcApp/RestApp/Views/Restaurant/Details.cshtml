@@ -1,0 +1,35 @@
+﻿@model RestApp.Models.Restaurant
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+<div class="row">
+    <div class="col-sm-6 ">
+        <table class="table table-bordered">
+
+            <tr>
+                <td>Id</td>
+                <td>@Model.Id</td>
+            </tr>
+            <tr>
+                <td>Title</td>
+                <td>@Model.Title</td>
+        </tr>
+        <tr>
+            <td>Rating</td>
+            <td>@Model.Rating</td>
+    </tr>
+    <tr>
+        <td>City</td>
+        <td>@Model.City</td>
+    </tr>
+            <tr>
+                <td colspan="2">
+                    <a href="~/restaurant/index"> <span class="glyphicon glyphicon-arrow-left"></span> </a>
+                </td>
+            </tr>
+</table>
+</div>
+</div>
